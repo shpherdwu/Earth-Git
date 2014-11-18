@@ -1,0 +1,12 @@
+#ifndef EARTHWIDGET_GLOBAL_H
+#define EARTHWIDGET_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef EARTHWIDGET_LIB
+# define EARTHWIDGET_EXPORT Q_DECL_EXPORT
+#else
+# define EARTHWIDGET_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // EARTHWIDGET_GLOBAL_H
