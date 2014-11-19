@@ -15,17 +15,17 @@
 
 namespace EarthWidget{
 
-class  Fuctions
+class  Functions
 {
 public:
-	Fuctions();
-	virtual ~Fuctions();
+	Functions();
+	virtual ~Functions();
 
 	void frame() {return theViewer.frame();}
 
 	bool earthFileLoad(const std::string& path,const std::string& name);
 
-	Viewer* getViewer() { return &theViewer; }
+	Viewer* GetViewer() { return &theViewer; }
 
 	QWidget*  GetGLQWidget() { return earthGLWidget; }
 

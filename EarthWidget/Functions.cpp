@@ -1,15 +1,15 @@
 
 
-#ifndef FUCTIONS_CPP
+#ifndef Functions_CPP
 
-#define FUCTIONS_CPP
+#define Functions_CPP
 
 #include "Functions.h"
 
 
 namespace EarthWidget{
 
-	Fuctions::Fuctions()
+	Functions::Functions()
 	{
 		sPath = "";
 		sName = "";
@@ -18,14 +18,14 @@ namespace EarthWidget{
 
 	}
 
-	Fuctions::~Fuctions()
+	Functions::~Functions()
 	{
 
 	}
 
 	
 
-	bool Fuctions::earthFileLoad(const std::string& path,const std::string& name)
+	bool Functions::earthFileLoad(const std::string& path,const std::string& name)
 	{
 
 		osg::DisplaySettings::instance()->setMinimumNumStencilBits(8);
@@ -59,4 +59,4 @@ namespace EarthWidget{
 }
 
 
-#endif //FUCTIONS_CPP
+#endif //Functions_CPP

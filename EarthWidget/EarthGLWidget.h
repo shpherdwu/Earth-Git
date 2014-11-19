@@ -8,7 +8,7 @@
 
 #include <QtCore/QTimer>
 
-#include "earthtoolz_global.h"
+
 #include "../zSettings/settings.h"
 
 namespace EarthWidget{

@@ -5,13 +5,16 @@
 #define VIEWER_H
 
 #include <osgViewer/Viewer>
+#include <osg/Camera>
 
+#include <osgEarthUtil/EarthManipulator>
 #include <osgEarthUtil/Controls>
 #include <osgEarth/MapNode>
+#include <osgEarth/Viewpoint>
 #include <osgGA/StateSetManipulator>
 #include <osgViewer/ViewerEventHandlers>
 
-#include "../zSettings/settings.h"
+
 
 namespace EarthWidget{
 
@@ -28,7 +31,7 @@ public:
 
 	void SetViewHome();
 
-/*	static osg::Camera* CreateCamera();*/
+	static osg::Camera* CreateCamera();
 
 
 private:
@@ -38,6 +41,11 @@ private:
 	void AddMouseCoords(osgViewer::View* viewer, osgEarth::MapNode* map_node);
 
 	osg::Group*                  root;
+
+	osgEarth::Util::EarthManipulator*   manipulator;
+
+	osgEarth::Viewpoint          current_viewpoint;
+
 //	osgEarth::MapNode*           mapNode;
 
 };
@@ -54,6 +62,7 @@ public:
 	bool handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActionAdapter& aa)
 	{
 
+		return true;
 	}
 
 
